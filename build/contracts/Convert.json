@@ -1,0 +1,417 @@
+{
+  "contractName": "Convert",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libraries/Convert.sol\":\"Convert\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/libraries/Convert.sol\":{\"keccak256\":\"0x102bcabc37601a32a1e7e6b0e544d9220461831832e9ec280f58e2a441c3189e\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://5333abcf65e32cf733d17deceaa0f01267ff35b0d04bd3a218c8356d08010f9e\",\"dweb:/ipfs/QmQ69kKe27bGYmZVo3vSkiadrsoJrnV3fktTRTpbkJWxsa\"]}},\"version\":1}",
+  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212209afe91cc54909b4dd9f8bbe9a98d18e2180a6a126ee7c6887cf58d26efbabde964736f6c634300060c0033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212209afe91cc54909b4dd9f8bbe9a98d18e2180a6a126ee7c6887cf58d26efbabde964736f6c634300060c0033",
+  "immutableReferences": {},
+  "sourceMap": "169:178:8:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "169:178:8:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: GPL-3.0\n\npragma solidity =0.6.12;\n\n// a library for performing overflow-safe math, courtesy of DappHub (https://github.com/dapphub/ds-math)\n\nlibrary Convert {\n    function bytesToAddress(bytes memory bys) internal pure returns (address addr) {\n        assembly {\n            addr := mload(add(bys,20))\n        }\n    }\n}\n",
+  "sourcePath": "/home/nurdaulet/Desktop/techcrypth/contracts/libraries/Convert.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libraries/Convert.sol",
+    "exportedSymbols": {
+      "Convert": [
+        2125
+      ]
+    },
+    "id": 2126,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2115,
+        "literals": [
+          "solidity",
+          "=",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:24:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2125,
+        "linearizedBaseContracts": [
+          2125
+        ],
+        "name": "Convert",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2123,
+              "nodeType": "Block",
+              "src": "270:75:8",
+              "statements": [
+                {
+                  "AST": {
+                    "nodeType": "YulBlock",
+                    "src": "289:50:8",
+                    "statements": [
+                      {
+                        "nodeType": "YulAssignment",
+                        "src": "303:26:8",
+                        "value": {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "name": "bys",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "321:3:8"
+                                },
+                                {
+                                  "kind": "number",
+                                  "nodeType": "YulLiteral",
+                                  "src": "325:2:8",
+                                  "type": "",
+                                  "value": "20"
+                                }
+                              ],
+                              "functionName": {
+                                "name": "add",
+                                "nodeType": "YulIdentifier",
+                                "src": "317:3:8"
+                              },
+                              "nodeType": "YulFunctionCall",
+                              "src": "317:11:8"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "mload",
+                            "nodeType": "YulIdentifier",
+                            "src": "311:5:8"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "311:18:8"
+                        },
+                        "variableNames": [
+                          {
+                            "name": "addr",
+                            "nodeType": "YulIdentifier",
+                            "src": "303:4:8"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "evmVersion": "istanbul",
+                  "externalReferences": [
+                    {
+                      "declaration": 2120,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "303:4:8",
+                      "valueSize": 1
+                    },
+                    {
+                      "declaration": 2117,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "321:3:8",
+                      "valueSize": 1
+                    }
+                  ],
+                  "id": 2122,
+                  "nodeType": "InlineAssembly",
+                  "src": "280:59:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2124,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bytesToAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2118,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2117,
+                  "mutability": "mutable",
+                  "name": "bys",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2124,
+                  "src": "215:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 2116,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "215:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "214:18:8"
+            },
+            "returnParameters": {
+              "id": 2121,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2120,
+                  "mutability": "mutable",
+                  "name": "addr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2124,
+                  "src": "256:12:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2119,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "255:14:8"
+            },
+            "scope": 2125,
+            "src": "191:154:8",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2126,
+        "src": "169:178:8"
+      }
+    ],
+    "src": "37:311:8"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/libraries/Convert.sol",
+      "exportedSymbols": {
+        "Convert": [
+          2125
+        ]
+      },
+      "license": "GPL-3.0"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "=",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 2115,
+        "name": "PragmaDirective",
+        "src": "37:24:8"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            2125
+          ],
+          "name": "Convert",
+          "scope": 2126
+        },
+        "children": [
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "bytesToAddress",
+              "overrides": null,
+              "scope": 2125,
+              "stateMutability": "pure",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "bys",
+                      "overrides": null,
+                      "scope": 2124,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 2116,
+                        "name": "ElementaryTypeName",
+                        "src": "215:5:8"
+                      }
+                    ],
+                    "id": 2117,
+                    "name": "VariableDeclaration",
+                    "src": "215:16:8"
+                  }
+                ],
+                "id": 2118,
+                "name": "ParameterList",
+                "src": "214:18:8"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "addr",
+                      "overrides": null,
+                      "scope": 2124,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 2119,
+                        "name": "ElementaryTypeName",
+                        "src": "256:7:8"
+                      }
+                    ],
+                    "id": 2120,
+                    "name": "VariableDeclaration",
+                    "src": "256:12:8"
+                  }
+                ],
+                "id": 2121,
+                "name": "ParameterList",
+                "src": "255:14:8"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "evmVersion": "istanbul",
+                      "externalReferences": [
+                        {
+                          "declaration": 2120,
+                          "isOffset": false,
+                          "isSlot": false,
+                          "src": "303:4:8",
+                          "valueSize": 1
+                        },
+                        {
+                          "declaration": 2117,
+                          "isOffset": false,
+                          "isSlot": false,
+                          "src": "321:3:8",
+                          "valueSize": 1
+                        }
+                      ],
+                      "operations": "{ addr := mload(add(bys, 20)) }"
+                    },
+                    "children": [],
+                    "id": 2122,
+                    "name": "InlineAssembly",
+                    "src": "280:59:8"
+                  }
+                ],
+                "id": 2123,
+                "name": "Block",
+                "src": "270:75:8"
+              }
+            ],
+            "id": 2124,
+            "name": "FunctionDefinition",
+            "src": "191:154:8"
+          }
+        ],
+        "id": 2125,
+        "name": "ContractDefinition",
+        "src": "169:178:8"
+      }
+    ],
+    "id": 2126,
+    "name": "SourceUnit",
+    "src": "37:311:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-06-18T13:36:17.794Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
